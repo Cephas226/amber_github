@@ -1,8 +1,8 @@
+import 'package:ambulanceHailerDriver/pages/authentification/login.dart';
+import 'package:ambulanceHailerDriver/pages/home/home_page.dart';
+import 'package:ambulanceHailerDriver/splash_screen/splash_screen.dart';
+import 'package:ambulanceHailerDriver/splash_screen/splash_screen_binding.dart';
 import 'package:get/get.dart';
-import 'package:getx_app/pages/authentification/login.dart';
-import 'package:getx_app/pages/home/home_page.dart';
-import 'package:getx_app/pages/splash_screen/splash_screen.dart';
-import 'package:getx_app/pages/splash_screen/splash_screen_binding.dart';
 
 import 'app_routes.dart';
 

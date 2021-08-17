@@ -1,8 +1,8 @@
+import 'package:ambulanceHailerDriver/DataHandler/appData.dart';
+import 'package:ambulanceHailerDriver/assistant/requestAssistant.dart';
+import 'package:ambulanceHailerDriver/library/place_request.dart';
+import 'package:ambulanceHailerDriver/models/addresse.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:getx_app/assistant/requestAssistant.dart';
-import 'package:getx_app/library/place_request.dart';
-import 'package:getx_app/models/addresse.dart';
-import 'package:getx_app/pages/DataHandler/appData.dart';
 import 'package:provider/provider.dart';
 class AssistantMethods {
   static Future<String> searchCoordinateAddress(Position position,context)

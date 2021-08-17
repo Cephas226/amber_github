@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:723964803921:android:1659cf35eee6b995e57170",
         "android_client_info": {
-          "package_name": "com.example.ambulanceHailer"
+          "package_name": "com.example.ambulanceHailerDriver"
         }
       },
       "oauth_client": [
