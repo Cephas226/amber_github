@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/main.dart';
-import 'package:getx_app/pages/home/home_page.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'myValadator.dart';
@@ -45,6 +44,12 @@ class AuthentificationController extends GetxController {
       validated = false;
     }
     return validated;
+  }
+  controllerReset() {
+    nameController.text = '';
+    phoneController.text = '';
+    passwordController.text = '';
+    selectedToggleUserType = [false, false];
   }
 
 }

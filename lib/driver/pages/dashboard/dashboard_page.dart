@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_app/pages/home/home_page.dart';
+import 'package:getx_app/rider/pages/home/home_page.dart';
 
 import 'dashboard_controller.dart';
 

@@ -11,11 +11,7 @@ import 'package:get/get.dart';
 import 'package:getx_app/assistant/assistantMethods.dart';
 import 'package:getx_app/library/configMaps.dart';
 import 'package:getx_app/library/place_request.dart';
-import 'package:getx_app/pages/DataHandler/appData.dart';
-import 'package:getx_app/pages/components/menu.dart';
-import 'package:getx_app/pages/components/menu1.dart';
-import 'package:getx_app/pages/trip/request_driver_trip.dart';
-import 'package:getx_app/pages/trip/payment_dialog.dart';
+import 'package:getx_app/rider/pages/components/menu1.dart';
 import 'package:getx_app/utils/bottom_sheet.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -518,17 +514,22 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                     children: <Widget>[
                       Align(
-                        alignment: Alignment.topLeft,
+                        alignment: Alignment.topRight,
                         child: Container(
-                          child: IconButton(
-                              icon: Icon(Icons.menu),
-                              onPressed: () {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return MenuOnePage();
-                                    });
-                              }),
+                          child: CircleAvatar(
+                            backgroundColor: Colors.red,
+                            child:
+
+                            IconButton(
+                                icon: Icon(Icons.menu,color: Colors.white),
+                                onPressed: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return MenuOnePage();
+                                      });
+                                }),
+                          ),
                         ),
                       ),
                       Spacer(),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:getx_app/rider/pages/home/home_page.dart';
 import 'package:getx_app/utils/CustomColors.dart';
 import 'package:getx_app/utils/CustomTextStyle.dart';
-import 'package:getx_app/utils/DottedLine.dart';
+import 'package:get/get.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -97,7 +98,6 @@ class _ProfileState extends State<Profile> {
                       ),
                     ],
                   ),
-
                   Container(
                     margin: EdgeInsets.only(left: 16, top: 12),
                     child: Text(
@@ -115,9 +115,11 @@ class _ProfileState extends State<Profile> {
                     width: double.infinity,
                     margin: EdgeInsets.only(right: 16, left: 16),
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(HomePage());
+                      },
                       child: Text(
-                        "Connect with Google Account",
+                        "Save",
                         style: CustomTextStyle.mediumTextStyle
                             .copyWith(color: Colors.white, fontSize: 14),
                       ),
@@ -131,7 +133,7 @@ class _ProfileState extends State<Profile> {
                     alignment: Alignment.bottomCenter,
                     child:
                     Padding(
-                      padding: const EdgeInsets.only(top: 400.0),
+                      padding: const EdgeInsets.only(top: 250.0),
                       child: InkWell(
                         onTap: (){},
                         child: Padding(

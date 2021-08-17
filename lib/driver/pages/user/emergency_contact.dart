@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_app/pages/home/home_page.dart';
+import 'package:getx_app/rider/pages/home/home_page.dart';
 import 'package:getx_app/utils/CustomTextStyle.dart';
 
 

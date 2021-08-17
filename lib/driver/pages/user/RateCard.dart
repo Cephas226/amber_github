@@ -175,7 +175,7 @@ class _RateCardState extends State<RateCard> {
                           ),
                           Container(
                             child: Text(
-                              "USD 80.00",
+                              "₵ 80.00",
                               style: CustomTextStyle.mediumTextStyle
                                   .copyWith(
                                   color: Colors.grey,
@@ -200,7 +200,7 @@ class _RateCardState extends State<RateCard> {
                           ),
                           Container(
                             child: Text(
-                              "USD 5.00",
+                              "₵ 5.00",
                               style: CustomTextStyle.mediumTextStyle
                                   .copyWith(
                                   color: Colors.grey,
@@ -226,7 +226,7 @@ class _RateCardState extends State<RateCard> {
                           Container(
 
                             child: Text(
-                              "USD 300.00",
+                              "₵ 300.00",
                               style: CustomTextStyle.mediumTextStyle
                                   .copyWith(
                                   color: Colors.grey,

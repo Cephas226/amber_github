@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:getx_app/utils/CustomTextStyle.dart';
 
-class MyTrips extends StatefulWidget {
+class NewsOffers extends StatefulWidget {
   @override
-  _MyTripsState createState() => _MyTripsState();
+  _NewsOffersState createState() => _NewsOffersState();
 }
 
-class _MyTripsState extends State<MyTrips> {
+class _NewsOffersState extends State<NewsOffers> {
   int selectedTab = 0;
 
   @override
@@ -17,7 +17,7 @@ class _MyTripsState extends State<MyTrips> {
         backgroundColor: Colors.white,
         elevation: 0,
         title: Text(
-          "My Trips",
+          "News and Offers",
           style: CustomTextStyle.mediumTextStyle.copyWith(color: Colors.black),
         ),
         centerTitle: true,
@@ -48,7 +48,7 @@ class _MyTripsState extends State<MyTrips> {
                       padding: EdgeInsets.only(
                           top: 14, bottom: 14, left: 8, right: 8),
                       child: Text(
-                        "Completed",
+                        "News",
                         style: CustomTextStyle.mediumTextStyle.copyWith(
                             color:
                             selectedTab == 0 ? Colors.black : Colors.grey),
@@ -74,7 +74,7 @@ class _MyTripsState extends State<MyTrips> {
                       padding: EdgeInsets.only(
                           top: 14, bottom: 14, left: 8, right: 8),
                       child: Text(
-                        "Up Comming",
+                        "Offers",
                         style: CustomTextStyle.mediumTextStyle.copyWith(
                             color:
                             selectedTab == 1 ? Colors.black : Colors.grey),
@@ -100,7 +100,7 @@ class _MyTripsState extends State<MyTrips> {
                       padding: EdgeInsets.only(
                           top: 14, bottom: 14, left: 8, right: 8),
                       child: Text(
-                        "Cancelled",
+                        "Promotion",
                         style: CustomTextStyle.mediumTextStyle.copyWith(
                             color:
                             selectedTab == 2 ? Colors.black : Colors.grey),
@@ -117,7 +117,7 @@ class _MyTripsState extends State<MyTrips> {
             ),
             ListView.builder(
                 itemBuilder: (context, position) {
-                  if (position == 0 || position % 3 == 0) {
+                  if (position == 0) {
                     return createDateHeader();
                   } else {
                     return createTripListItem(position);
@@ -125,7 +125,7 @@ class _MyTripsState extends State<MyTrips> {
                 },
                 shrinkWrap: true,
                 primary: false,
-                itemCount:6)
+                itemCount: 2)
           ],
         ),
       ),
@@ -134,7 +134,7 @@ class _MyTripsState extends State<MyTrips> {
 
   createDateHeader() {
     return Container(
-      margin: EdgeInsets.only(left: 16,top: 16),
+      margin: EdgeInsets.only(left: 16, top: 16),
       child: Text(
         "MON 8 OCT 2018",
         style: CustomTextStyle.mediumTextStyle.copyWith(color: Colors.grey),
@@ -149,125 +149,70 @@ class _MyTripsState extends State<MyTrips> {
     }
     return Container(
       margin: EdgeInsets.only(top: 8, bottom: bottomMargin),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            width: 40,
-            height: 40,
-            margin: EdgeInsets.only(top: 8, left: 16),
-            decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                image: DecorationImage(image: AssetImage("images/driver.jpg")),
-                borderRadius: BorderRadius.circular(6),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey, offset: Offset(0, 1), blurRadius: 10)
-                ]),
-          ),
-          SizedBox(
-            width: 16,
-          ),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.only(right: 16),
-              decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade300,
-                      offset: Offset(4,0),
-                      blurRadius: 10,
-                    )
-                  ]
-              ),
-              child: Card(
-                elevation: 2,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8)),
-                child: Container(
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Container(
-                            child: Text(
-                              "Nihal Perera",
-                              style: CustomTextStyle.mediumTextStyle,
-                            ),
-                          ),
-                          Container(
-                            child: RichText(
-                                text: TextSpan(children: [
-                                  TextSpan(
-                                      text: "USD",
-                                      style: CustomTextStyle.regularTextStyle
-                                          .copyWith(
-                                          color: Colors.grey, fontSize: 12)),
-                                  TextSpan(
-                                      text: " 860.00",
-                                      style: CustomTextStyle.mediumTextStyle.copyWith(
-                                          color: Colors.black, fontSize: 14))
-                                ])),
-                          )
-                        ],
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      ),
-                      addressRow(Colors.tealAccent.shade700,
-                          "R. A De Mel Mawatha", "07:35 PM"),
-                      addressRow(Colors.redAccent.shade700,
-                          "Piliyandala, Maharagama Road", "08:26 PM")
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            flex: 100,
-          )
-        ],
-      ),
-    );
-  }
-
-  addressRow(Color color, String address, String strTime) {
-    return Container(
-      margin: EdgeInsets.only(top: 8),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            height: 10,
-            width: 10,
-            margin: EdgeInsets.only(top: 3),
-            decoration: BoxDecoration(color: color, shape: BoxShape.circle),
-          ),
-          SizedBox(
-            width: 12,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius:  BorderRadius.circular(8)),
+        margin: EdgeInsets.only(left: 14,right: 14),
+        color: Colors.amber,
+        child: Container(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.all(12),
+                    height: 100,
+                    width: 100,
+                    child: Image(image: AssetImage("images/ic_logo.png")),
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(right: 16),
+                        child: RichText(
+                            text: TextSpan(children: [
+                              TextSpan(
+                                  text: "₵ ",
+                                  style: CustomTextStyle.regularTextStyle
+                                      .copyWith(fontSize: 12)),
+                              TextSpan(
+                                  text: "400.00",
+                                  style: CustomTextStyle.boldTextStyle
+                                      .copyWith(fontSize: 24))
+                            ])),
+                      ),
+                      SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        "CASH BACK",
+                        style: CustomTextStyle.mediumTextStyle
+                            .copyWith(color: Colors.brown),
+                      )
+                    ],
+                  )
+                ],
+              ),
               Container(
-                margin: EdgeInsets.only(bottom: 4),
                 child: Text(
-                  address,
+                  "Get Your Cash Back",
                   style: CustomTextStyle.boldTextStyle,
                 ),
+                margin: EdgeInsets.only(left: 16),
               ),
               Container(
                 child: Text(
-                  strTime,
+                  "Get 25% CASH BACK on the first Rs. 400 of your trip value\ntill the 31st October! T&C apply",
                   style: CustomTextStyle.regularTextStyle
-                      .copyWith(color: Colors.grey, fontSize: 12),
+                      .copyWith(color: Colors.brown, fontSize: 12),
                 ),
+                margin: EdgeInsets.only(left: 16,right: 16,bottom: 16,top: 4),
               )
             ],
-          )
-        ],
+          ),
+        ),
       ),
     );
   }

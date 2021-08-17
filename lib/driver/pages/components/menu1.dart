@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'package:getx_app/pages/user/profile.dart';class MenuOnePage extends StatelessWidget {
+import 'package:getx_app/rider/pages/trip/my_trips.dart';
+import 'package:getx_app/rider/pages/user/profile.dart';
+class MenuOnePage extends StatelessWidget {
   static final String path = "lib/src/pages/navigation/menu1.dart";
   final Color primary = Color(0xff4BBEC0);
   final TextStyle style = TextStyle(
@@ -126,7 +127,9 @@ import 'package:getx_app/pages/user/profile.dart';class MenuOnePage extends Stat
                 ),
               ),
               InkWell(
-                onTap: (){},
+                onTap: (){
+                  Get.to(MyTrips());
+                },
                 splashColor: primary,
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),

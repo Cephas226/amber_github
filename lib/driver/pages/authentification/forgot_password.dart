@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_app/pages/authentification/verify_code.dart';
+import 'package:getx_app/rider/pages/authentification/verify_code.dart';
 import 'package:getx_app/utils/CustomTextStyle.dart';
 
 class ForgotPassword extends StatefulWidget {
@@ -15,6 +15,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
